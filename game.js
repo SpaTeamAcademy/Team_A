@@ -90,5 +90,3 @@ function display(player, computer, outcome){ //displays the outcome of the game 
     console.log(output);
     //document.getElementById("outcome") = output;
 }
-
-play(2);
