@@ -37,12 +37,12 @@ Das Projekt besteht darin eine Homepage zu programmieren, die folgende Funktione
 
 Commits müssen dem folgenden Muster entsprechen:
 
-**Commit Message:** Letzte Änderung | Initialen der Person(en) die den Code reviewt haben _(optional, Pull Requests)_
+**Commit Message:** [Asana ID] Letzte Änderung | Initialen der Person(en) die den Code reviewt haben _(bei Pull Requests)_
 
 **Commit Description:** Titel & Link zum Asana Task
 
 ### Beispiel: 
 
-**Commit Message:** ```function win_loss updated; code cleaning | A.H., C.R.``` 
+**Commit Message:** ```[002] function win_loss updated; code cleaning | A.H., C.R.``` 
 
-**Commit Description:** ```Schere-Stein-Papier https://app.asana.com/0/1202853460xxxxx/```
+**Commit Description:** ```002 Schere-Stein-Papier https://app.asana.com/0/1202853460xxxxx/```
