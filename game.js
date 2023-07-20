@@ -1,3 +1,7 @@
+document.getElementById("rockBtn").addEventListener("click", function(){play(1);});
+document.getElementById("paperBtn").addEventListener("click", function(){play(2);});
+document.getElementById("scissorBtn").addEventListener("click", function(){play(0);});
+
 function play(player){//main function, gets the player's choice as a number
     console.log("Player picks " + toText(player, false));
     let computer = pickRandom();
