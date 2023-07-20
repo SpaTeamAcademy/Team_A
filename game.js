@@ -1,6 +1,6 @@
-document.getElementById("rockBtn").addEventListener("click", function(){play(1);});
-document.getElementById("paperBtn").addEventListener("click", function(){play(2);});
-document.getElementById("scissorBtn").addEventListener("click", function(){play(0);});
+document.getElementById("rockBtn").addEventListener("click", function(){play(0);});
+document.getElementById("paperBtn").addEventListener("click", function(){play(1);});
+document.getElementById("scissorBtn").addEventListener("click", function(){play(2);});
 
 function play(player){//main function, gets the player's choice as a number
     console.log("Player picks " + toText(player, false));
@@ -10,7 +10,7 @@ function play(player){//main function, gets the player's choice as a number
 }
 
 function pickRandom(){//computer picks rock paper or scissors as a number
-    let computer = Math.floor(Math.random()*3); //0 = Scissors, 1 = Rock, 2 = Paper
+    let computer = Math.floor(Math.random()*3); //0 = Rock, 1 = Paper, 2 = Scissors
     console.log("Computer picks " + toText(computer, false));
     return computer;
 }
@@ -55,24 +55,24 @@ function toText(number, capital){ //converts a number form 0-2 to it's correspon
     let text;
     if(capital){
         if(number === 0){
-            text = "Scissors";
-        }
-        else if(number === 1){
             text = "Rock";
         }
-        else if(number === 2){
+        else if(number === 1){
             text = "Paper";
+        }
+        else if(number === 2){
+            text = "Scissors";
         }
     }
     else{
         if(number === 0){
-            text = "scissors";
-        }
-        else if(number === 1){
             text = "rock";
         }
-        else if(number === 2){
+        else if(number === 1){
             text = "paper";
+        }
+        else if(number === 2){
+            text = "scissors";
         }
     }
     return text;
