@@ -11,7 +11,7 @@ function pickRandom(){//computer picks rock paper or scissors as a number
     return computer;
 }
 
-function compare(player, computer){ //decides the outcome of the game and returns it as a number
+function compare(player, computer){ //decides the outcome of the game and returns it as a number, needed in 003.3
     if(computer === 0){
         if(player === 0){
             return 0;
@@ -74,7 +74,7 @@ function toText(number, capital){ //converts a number form 0-2 to it's correspon
     return text;
 }
 
-function display(player, computer, outcome){ //displays the outcome of the game in HTML and the console
+function display(player, computer, outcome){ //displays the outcome of the game in HTML and the console, needed in 003.3
     let output;
 
     if(outcome === 0){
