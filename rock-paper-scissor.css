@@ -1,0 +1,34 @@
+/*all declarations are placeholders to give the document structure*/
+
+body {
+    background-color: white;
+    text-align: center;
+}
+
+h1 {
+    color: black;
+}
+
+p{
+    color:black;
+}
+
+.BtnContainer {
+    text-align: center;
+}
+
+button {
+    color: black;
+}
+
+#rockBtn {
+    background-color: burlywood;
+}
+
+#paperBtn {
+    background-color: cadetblue;
+}
+
+#scissorBtn {
+    background-color: darkseagreen;
+}
