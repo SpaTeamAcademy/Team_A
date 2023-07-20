@@ -1,9 +1,15 @@
-document.getElementById("rockBtn").addEventListener("click", choseOption("rock"));
-document.getElementById("paperBtn").addEventListener("click", choseOption("paper"));
-document.getElementById("scissorBtn").addEventListener("click", choseOption("scissor"));
-
-function choseOption(choice) {
-    let usersChoice = choice;
-    return usersChoice;
-}
-console.log(usersChoice);
+document.getElementById("rockBtn").addEventListener("click", function(){
+    let playersChoice = 1
+    console.log(playersChoice)
+    return playersChoice
+});
+document.getElementById("paperBtn").addEventListener("click", function(){
+    let playersChoice = 2
+    console.log(playersChoice)
+    return playersChoice
+});
+document.getElementById("scissorBtn").addEventListener("click", function(){
+    let playersChoice = 0
+    console.log(playersChoice)
+    return playersChoice
+});
