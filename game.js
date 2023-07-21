@@ -3,10 +3,10 @@ document.getElementById("paperBtn").addEventListener("click", function(){play("p
 document.getElementById("scissorBtn").addEventListener("click", function(){play("scissors");});
 
 function play(player){//main function, gets the player's choice as a number
-    console.log("Player picks " + toText(player, false));
+    console.log("Player picks " + player);
     let computer = pickRandom();
-    let outcome = compare(player, computer); // 0 = draw, 1 = win, 2 = lose
-    display(player, computer, outcome);
+    //let outcome = compare(player, computer); // 0 = draw, 1 = win, 2 = lose
+    //display(player, computer, outcome);
 }
 
 function pickRandom(){//computer picks rock paper or scissors as a number
