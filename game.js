@@ -63,22 +63,6 @@ function pickRandom(){//computer picks rock paper or scissors as a number
     }
 }*/
 
-function toText(number){ //converts a number form 0-2 to it's corresponding choice, i.e. 1 = rock
-    let text;
-
-    if(number === 0){
-        text = "rock";
-    }
-    else if(number === 1){
-        text = "paper";
-    }
-    else if(number === 2){
-        text = "scissors";
-    }
-
-    return text;
-}
-
 /*function display(player, computer, outcome){ //displays the outcome of the game in HTML and the console
     let output;
 
