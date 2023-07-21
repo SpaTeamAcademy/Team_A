@@ -5,8 +5,8 @@ document.getElementById("scissorBtn").addEventListener("click", function(){play(
 function play(player){//main function, gets the player's choice as a number
     console.log("Player picks " + toText(player, false));
     let computer = pickRandom();
-    let outcome = compare(player, computer); // 0 = draw, 1 = win, 2 = lose
-    display(player, computer, outcome);
+    //let outcome = compare(player, computer); // 0 = draw, 1 = win, 2 = lose
+    //display(player, computer, outcome);
 }
 
 function pickRandom(){//computer picks rock paper or scissors as a number
@@ -15,7 +15,7 @@ function pickRandom(){//computer picks rock paper or scissors as a number
     return computer;
 }
 
-function compare(player, computer){ //decides the outcome of the game and returns it as a number, needed in 003.3
+/*function compare(player, computer){ //decides the outcome of the game and returns it as a number, needed in 003.3
     if(computer === 0){
         if(player === 0){
             return 0;
@@ -49,7 +49,7 @@ function compare(player, computer){ //decides the outcome of the game and return
             return 0;
         }
     }
-}
+}*/
 
 function toText(number, capital){ //converts a number form 0-2 to it's corresponding choice, i.e. 1 = rock
     let text;
@@ -78,7 +78,7 @@ function toText(number, capital){ //converts a number form 0-2 to it's correspon
     return text;
 }
 
-function display(player, computer, outcome){ //displays the outcome of the game in HTML and the console, needed in 003.3
+/*function display(player, computer, outcome){ //displays the outcome of the game in HTML and the console, needed in 003.3
     let output;
 
     if(outcome === 0){
@@ -92,5 +92,5 @@ function display(player, computer, outcome){ //displays the outcome of the game 
     }
 
     console.log(output);
-    //document.getElementById("outcome") = output;
-}
+    document.getElementById("outcome") = output;
+}*/
