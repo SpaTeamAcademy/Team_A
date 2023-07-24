@@ -28,37 +28,31 @@ function pickRandom(){//computer picks rock paper or scissors as a number
 }
 
 function compare(player, computer){ //decides the outcome of the game and returns it as a number
-    if(computer === 0){
-        if(player === 0){
-            return "draw";
-        }
-        else if(player === 1){
+    if(computer === player){
+        return "draw";
+    }
+    else if(computer === "rock"){
+        if(player === "paper"){
             return "win";
         }
-        else if(player === 2){
+        else if(player === "scissors"){
             return "lose";
         }
     }
-    else if(computer === 1){
-        if(player === 0){
+    else if(computer === "paper"){
+        if(player === "rock"){
             return "lose";
         }
-        else if(player === 1){
-            return "draw";
-        }
-        else if(player === 2){
+        else if(player === "scissors"){
             return "win";
         }
     }
-    else if(computer === 2){
-        if(player === 0){
+    else if(computer === "scissors"){
+        if(player === "rock"){
             return "win";
         }
-        else if(player === 1){
+        else if(player === "paper"){
             return "lose";
-        }
-        else if(player === 2){
-            return "draw";
         }
     }
 }
