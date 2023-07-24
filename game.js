@@ -5,12 +5,12 @@ document.getElementById("scissorBtn").addEventListener("click", function(){play(
 function play(player){//main function, gets the player's choice as a number
     console.log("Player picks " + player);
     let computer = pickRandom();
-    //let outcome = compare(player, computer); // 0 = draw, 1 = win, 2 = lose
-    //display(player, computer, outcome);
+    let outcome = compare(player, computer);
+    display(player, computer, outcome);
 }
 
 function pickRandom(){//computer picks rock paper or scissors as a number
-    let rand = Math.floor(Math.random()*3); //0 = Rock, 1 = Paper, 2 = Scissors
+    let rand = Math.floor(Math.random()*3);
     let computer;
 
     if(rand === 0){
@@ -27,55 +27,49 @@ function pickRandom(){//computer picks rock paper or scissors as a number
     return computer;
 }
 
-/*function compare(player, computer){ //decides the outcome of the game and returns it as a number
-    if(computer === 0){
-        if(player === 0){
-            return "draw";
-        }
-        else if(player === 1){
+function compare(player, computer){ //decides the outcome of the game and returns it as a number
+    if(computer === player){
+        return "draw";
+    }
+    else if(computer === "rock"){
+        if(player === "paper"){
             return "win";
         }
-        else if(player === 2){
+        else if(player === "scissors"){
             return "lose";
         }
     }
-    else if(computer === 1){
-        if(player === 0){
+    else if(computer === "paper"){
+        if(player === "rock"){
             return "lose";
         }
-        else if(player === 1){
-            return "draw";
-        }
-        else if(player === 2){
+        else if(player === "scissors"){
             return "win";
         }
     }
-    else if(computer === 2){
-        if(player === 0){
+    else if(computer === "scissors"){
+        if(player === "rock"){
             return "win";
         }
-        else if(player === 1){
+        else if(player === "paper"){
             return "lose";
         }
-        else if(player === 2){
-            return "draw";
-        }
     }
-}*/
+}
 
-/*function display(player, computer, outcome){ //displays the outcome of the game in HTML and the console
+function display(player, computer, outcome){ //displays the outcome of the game in HTML and the console
     let output;
 
     if(outcome === "draw"){
-        output = "We both chose " + toText(player, false) + ". Nobody wins.";
+        output = "We both chose " + player + ". Nobody wins.";
     }
     else if(outcome === "win"){
-        output = toText(player, true) + " beats " + toText(computer, false) + ". You win.";
+        output = player + " beats " + computer + ". You win.";
     }
     else if(outcome === "lose"){
-        output = toText(computer, true) + " beats " + toText(player, false) + ". I win.";
+        output = computer + " beats " + player + ". I win.";
     }
 
     console.log(output);
     document.getElementById("outcome").innerText = output;
-}*/
+}
