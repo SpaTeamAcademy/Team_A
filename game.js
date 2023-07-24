@@ -63,22 +63,19 @@ function compare(player, computer){ //decides the outcome of the game and return
     }
 }
 
-/*function display(player, computer, outcome){ //displays the outcome of the game in HTML and the console
+function display(player, computer, outcome){ //displays the outcome of the game in HTML and the console
     let output;
 
     if(outcome === "draw"){
-        output = "We both chose " + toText(player, false) + ". Nobody wins.";
+        output = "We both chose " + player + ". Nobody wins.";
     }
     else if(outcome === "win"){
-        output = toText(player, true) + " beats " + toText(computer, false) + ". You win.";
+        output = player + " beats " + computer + ". You win.";
     }
     else if(outcome === "lose"){
-        output = toText(computer, true) + " beats " + toText(player, false) + ". I win.";
+        output = computer + " beats " + player + ". I win.";
     }
 
     console.log(output);
     document.getElementById("outcome").innerText = output;
-<<<<<<< HEAD
 }
-*/
-
