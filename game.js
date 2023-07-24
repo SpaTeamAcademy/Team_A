@@ -1,17 +1,29 @@
-document.getElementById("rockBtn").addEventListener("click", function(){play(0);});
-document.getElementById("paperBtn").addEventListener("click", function(){play(1);});
-document.getElementById("scissorBtn").addEventListener("click", function(){play(2);});
+document.getElementById("rockBtn").addEventListener("click", function(){play("rock");});
+document.getElementById("paperBtn").addEventListener("click", function(){play("paper");});
+document.getElementById("scissorBtn").addEventListener("click", function(){play("scissors");});
 
 function play(player){//main function, gets the player's choice as a number
-    console.log("Player picks " + toText(player, false));
+    console.log("Player picks " + player);
     let computer = pickRandom();
     let outcome = compare(player, computer); // 0 = draw, 1 = win, 2 = lose
     display(player, computer, outcome);
 }
 
 function pickRandom(){//computer picks rock paper or scissors as a number
-    let computer = Math.floor(Math.random()*3); //0 = Rock, 1 = Paper, 2 = Scissors
-    console.log("Computer picks " + toText(computer, false));
+    let rand = Math.floor(Math.random()*3); //0 = Rock, 1 = Paper, 2 = Scissors
+    let computer;
+
+    if(rand === 0){
+        computer = "rock";
+    }
+    else if(rand === 1){
+        computer = "paper";
+    }
+    else if(rand === 2){
+        computer = "scissors";
+    }
+
+    console.log("Computer picks " + computer);
     return computer;
 }
 
@@ -51,34 +63,7 @@ function compare(player, computer){ //decides the outcome of the game and return
     }
 }
 
-function toText(number, capital){ //converts a number form 0-2 to it's corresponding choice, i.e. 1 = rock
-    let text;
-    if(capital){
-        if(number === 0){
-            text = "Rock";
-        }
-        else if(number === 1){
-            text = "Paper";
-        }
-        else if(number === 2){
-            text = "Scissors";
-        }
-    }
-    else{
-        if(number === 0){
-            text = "rock";
-        }
-        else if(number === 1){
-            text = "paper";
-        }
-        else if(number === 2){
-            text = "scissors";
-        }
-    }
-    return text;
-}
-
-function display(player, computer, outcome){ //displays the outcome of the game in HTML and the console
+/*function display(player, computer, outcome){ //displays the outcome of the game in HTML and the console
     let output;
 
     if(outcome === "draw"){
@@ -93,4 +78,7 @@ function display(player, computer, outcome){ //displays the outcome of the game 
 
     console.log(output);
     document.getElementById("outcome").innerText = output;
+<<<<<<< HEAD
 }
+*/
+
