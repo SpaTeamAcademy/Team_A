@@ -5,12 +5,12 @@ document.getElementById("scissorBtn").addEventListener("click", function(){play(
 function play(player){//main function, gets the player's choice as a number
     console.log("Player picks " + player);
     let computer = pickRandom();
-    let outcome = compare(player, computer); // 0 = draw, 1 = win, 2 = lose
+    let outcome = compare(player, computer);
     display(player, computer, outcome);
 }
 
 function pickRandom(){//computer picks rock paper or scissors as a number
-    let rand = Math.floor(Math.random()*3); //0 = Rock, 1 = Paper, 2 = Scissors
+    let rand = Math.floor(Math.random()*3);
     let computer;
 
     if(rand === 0){
