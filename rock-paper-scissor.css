@@ -1,34 +1,40 @@
-/*all declarations are placeholders to give the document structure*/
-
-body {
-    background-color: white;
+* {
+    background-color: #ffe4c4;
     text-align: center;
+    font-family: 'Courier New', Courier, monospace;
 }
+
 
 h1 {
-    color: black;
+    color: #ffe4c4;
+    background-color: #7b9363;
+    font-weight: bold;
+    font-size: 50px;
 }
 
+
 p{
-    color:black;
+    color: #4e342e;
+    font-size: 20px;
+}
+
+#outcome {
+    height: 20px;
 }
 
 .BtnContainer {
     text-align: center;
 }
 
-button {
-    color: black;
+
+.BtnContainer > button {
+    border-style: solid;
+    font-size: 50px;
+    padding: 20px;
 }
 
-#rockBtn {
-    background-color: burlywood;
-}
 
-#paperBtn {
-    background-color: cadetblue;
-}
-
-#scissorBtn {
-    background-color: darkseagreen;
+#resetBtn {
+    font-size: 20px;
+    margin: 15px;
 }
