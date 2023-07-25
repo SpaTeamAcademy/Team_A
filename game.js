@@ -1,10 +1,10 @@
 document.getElementById("rockBtn").addEventListener("click", function(){play("rock");});
 document.getElementById("paperBtn").addEventListener("click", function(){play("paper");});
 document.getElementById("scissorBtn").addEventListener("click", function(){play("scissors");});
-let scoreplayer = 0; // lets for the score board and to add and remove 0
-let scorepc =0;
-let addscorezeroplayer = "";
-let addscorezeropc = "";
+let scorePlayer = 0; // lets for the score board and to add and remove 0
+let scorePc =0;
+let addScoreZeroPlayer = "";
+let addScoreZeroPc = "";
 
 
 function play(player){//main function, gets the player's choice as a number
@@ -12,9 +12,9 @@ function play(player){//main function, gets the player's choice as a number
     let computer = pickRandom();
     let outcome = compare(player, computer);
     display(player, computer, outcome);
-    if(scoreplayer<10){addscorezeroplayer="0"}else{addscorezeroplayer=""} // shows score
-    if(scorepc<10){addscorezeropc="0"}else{addscorezeropc=""}
-    document.getElementById("score-display").innerHTML =addscorezeroplayer + scoreplayer + ":"+addscorezeropc + scorepc;
+    if(scorePlayer<10){addScoreZeroPlayer="0"}else{addScoreZeroPlayer=""} // shows score
+    if(scorePc<10){addScoreZeroPc="0"}else{addScoreZeroPc=""}
+    document.getElementById("score-display").innerHTML =addScoreZeroPlayer + scorePlayer + ":"+addScoreZeroPc + scorePc;
 }
 
 
@@ -79,11 +79,11 @@ function display(player, computer, outcome){ //displays the outcome of the game 
     }
     else if(outcome === "win"){
         output = player + " beats " + computer + ". You win.";
-        scoreplayer++;
+        scorePlayer++;
     }
     else if(outcome === "lose"){
         output = computer + " beats " + player + ". I win.";
-        scorepc ++;
+        scorePc ++;
     }
 
 
