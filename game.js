@@ -1,22 +1,19 @@
 document.getElementById("rockBtn").addEventListener("click", function(){play("rock");});
 document.getElementById("paperBtn").addEventListener("click", function(){play("paper");});
 document.getElementById("scissorBtn").addEventListener("click", function(){play("scissors");});
-let scorePlayer = 0; // lets for the score board and to add and remove 0
-let scorePc =0;
-let addScoreZeroPlayer = "";
-let addScoreZeroPc = "";
+
+let scorePlayer = 0;
+let scorePc = 0;
 
 
 function play(player){//main function, gets the player's choice as a number
     console.log("Player picks " + player);
     let computer = pickRandom();
     let outcome = compare(player, computer);
-    display(player, computer, outcome);
-    if(scorePlayer<10){addScoreZeroPlayer="0"}else{addScoreZeroPlayer=""} // shows score
-    if(scorePc<10){addScoreZeroPc="0"}else{addScoreZeroPc=""}
-    document.getElementById("score-display").innerHTML =addScoreZeroPlayer + scorePlayer + ":"+addScoreZeroPc + scorePc;
+    displayOutcome(player, computer, outcome);
+    countScore(outcome)
+    displayScore(scorePlayer, scorePc)
 }
-
 
 function pickRandom(){//computer picks rock paper or scissors as a number
     let rand = Math.floor(Math.random()*3);
@@ -37,7 +34,6 @@ function pickRandom(){//computer picks rock paper or scissors as a number
     console.log("Computer picks " + computer);
     return computer;
 }
-
 
 function compare(player, computer){ //decides the outcome of the game and returns it as a number
     if(computer === player){
@@ -69,8 +65,23 @@ function compare(player, computer){ //decides the outcome of the game and return
     }
 }
 
+function countScore(outcome){
+    if (outcome === "win"){
+        scorePlayer++
+    } 
+    else if (outcome === "lose"){
+            scorePc++
+    }
+}
 
-function display(player, computer, outcome){ //displays the outcome of the game in HTML and the console
+function displayScore(scorePlayer, scorePc){
+    if (scorePlayer < 10) { scorePlayer = "0" + scorePlayer};
+    if (scorePc < 10) {scorePc = "0" + scorePc};
+
+    document.getElementById("score-display").innerText = scorePlayer + " : " + scorePc;
+}
+
+function displayOutcome(player, computer, outcome){ //displays the outcome of the game in HTML and the console
     let output;
 
 
@@ -79,13 +90,10 @@ function display(player, computer, outcome){ //displays the outcome of the game 
     }
     else if(outcome === "win"){
         output = player + " beats " + computer + ". You win.";
-        scorePlayer++;
     }
     else if(outcome === "lose"){
         output = computer + " beats " + player + ". I win.";
-        scorePc ++;
     }
-
 
     console.log(output);
     document.getElementById("outcome").innerText = output;
