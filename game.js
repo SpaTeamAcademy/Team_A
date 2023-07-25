@@ -1,17 +1,27 @@
 document.getElementById("rockBtn").addEventListener("click", function(){play("rock");});
 document.getElementById("paperBtn").addEventListener("click", function(){play("paper");});
 document.getElementById("scissorBtn").addEventListener("click", function(){play("scissors");});
+let scoreplayer = 0; // lets for the score board and to add and remove 0
+let scorepc =0;
+let addscorezeroplayer = "";
+let addscorezeropc = "";
+
 
 function play(player){//main function, gets the player's choice as a number
     console.log("Player picks " + player);
     let computer = pickRandom();
     let outcome = compare(player, computer);
     display(player, computer, outcome);
+    if(scoreplayer<10){addscorezeroplayer="0"}else{addscorezeroplayer=""} // shows score
+    if(scorepc<10){addscorezeropc="0"}else{addscorezeropc=""}
+    document.getElementById("score-display").innerHTML =addscorezeroplayer + scoreplayer + ":"+addscorezeropc + scorepc;
 }
+
 
 function pickRandom(){//computer picks rock paper or scissors as a number
     let rand = Math.floor(Math.random()*3);
     let computer;
+
 
     if(rand === 0){
         computer = "rock";
@@ -23,9 +33,11 @@ function pickRandom(){//computer picks rock paper or scissors as a number
         computer = "scissors";
     }
 
+
     console.log("Computer picks " + computer);
     return computer;
 }
+
 
 function compare(player, computer){ //decides the outcome of the game and returns it as a number
     if(computer === player){
@@ -57,19 +69,29 @@ function compare(player, computer){ //decides the outcome of the game and return
     }
 }
 
+
 function display(player, computer, outcome){ //displays the outcome of the game in HTML and the console
     let output;
+
 
     if(outcome === "draw"){
         output = "We both chose " + player + ". Nobody wins.";
     }
     else if(outcome === "win"){
         output = player + " beats " + computer + ". You win.";
+        scoreplayer++;
     }
     else if(outcome === "lose"){
         output = computer + " beats " + player + ". I win.";
+        scorepc ++;
     }
+
 
     console.log(output);
     document.getElementById("outcome").innerText = output;
+}
+
+
+function reset() {
+    document.getElementById("outcome").innerText = ""
 }
