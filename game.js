@@ -2,16 +2,23 @@ document.getElementById("rockBtn").addEventListener("click", function(){play("ro
 document.getElementById("paperBtn").addEventListener("click", function(){play("paper");});
 document.getElementById("scissorBtn").addEventListener("click", function(){play("scissors");});
 
+let scorePlayer = 0;
+let scorePc = 0;
+
+
 function play(player){//main function, gets the player's choice as a number
     console.log("Player picks " + player);
     let computer = pickRandom();
     let outcome = compare(player, computer);
-    display(player, computer, outcome);
+    displayOutcome(player, computer, outcome);
+    countScore(outcome)
+    displayScore(scorePlayer, scorePc)
 }
 
 function pickRandom(){//computer picks rock paper or scissors as a number
     let rand = Math.floor(Math.random()*3);
     let computer;
+
 
     if(rand === 0){
         computer = "rock";
@@ -22,6 +29,7 @@ function pickRandom(){//computer picks rock paper or scissors as a number
     else if(rand === 2){
         computer = "scissors";
     }
+
 
     console.log("Computer picks " + computer);
     return computer;
@@ -57,8 +65,25 @@ function compare(player, computer){ //decides the outcome of the game and return
     }
 }
 
-function display(player, computer, outcome){ //displays the outcome of the game in HTML and the console
+function countScore(outcome){
+    if (outcome === "win"){
+        scorePlayer++
+    } 
+    else if (outcome === "lose"){
+            scorePc++
+    }
+}
+
+function displayScore(scorePlayer, scorePc){
+    if (scorePlayer < 10) { scorePlayer = "0" + scorePlayer};
+    if (scorePc < 10) {scorePc = "0" + scorePc};
+
+    document.getElementById("score-display").innerText = scorePlayer + " : " + scorePc;
+}
+
+function displayOutcome(player, computer, outcome){ //displays the outcome of the game in HTML and the console
     let output;
+
 
     if(outcome === "draw"){
         output = "We both chose " + player + ". Nobody wins.";
@@ -72,4 +97,9 @@ function display(player, computer, outcome){ //displays the outcome of the game 
 
     console.log(output);
     document.getElementById("outcome").innerText = output;
+}
+
+
+function reset() {
+    document.getElementById("outcome").innerText = ""
 }
