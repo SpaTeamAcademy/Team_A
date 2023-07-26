@@ -112,15 +112,6 @@ li a:hover{
 .BtnContainer {
     text-align: center;
 }
-#rockBtn {
-    background-color: burlywood;
-}
-#paperBtn {
-    background-color: cadetblue;
-}
-#scissorBtn {
-    background-color: darkseagreen;
-}
 #outcome {
     height: 20px;
 }
