@@ -1,0 +1,132 @@
+/*Global*/
+*{
+    font-family: 'Courier New';
+}
+
+body{
+    background-color: bisque;
+    text-align: center;
+}
+
+h1{
+    padding: auto;
+    color:#4e342e;
+    background-color: rgb(123, 147, 99);
+    height: 120px;
+    font-size: 50px;
+}
+
+p{
+    font-size: 25px;
+}
+h2{
+    font-size: 38px;
+}
+
+footer{
+    text-align: center;
+    border-top: solid 2px;
+    padding-top: 25px;
+    margin-top: 50px;
+}
+
+a{ 
+    color: black;
+    text-decoration: none;
+    padding: 15px;
+}
+
+/*Homepage*/
+.AboutUs{
+    text-align: justify;
+    column-count: 2;
+    column-gap: 300px;
+    margin-top: 100px;
+}
+
+a:hover, a:active{
+    color: grey;
+}
+
+/*Navigation*/
+nav{
+    background-color: #577956;
+    text-align: left;
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:  #577956;
+}
+
+li{
+    float: left;
+}
+
+li a{
+    display: inline-block;
+    color: #ffe4c4;
+    text-align: left;
+    padding: 12px 18px;
+    text-decoration: none;
+}
+
+li a:hover{
+    background-color: #435e42;
+  }
+
+.active{
+    background-color: #fff2e2;
+}
+
+/*Rock Paper Scissors*/
+.Bttn{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    overflow: hidden;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+#outcome {
+    height: 20px;
+}
+
+.BtnContainer {
+    text-align: center;
+}
+
+.BtnContainer > button {
+    border-style: solid;
+    font-size: 70px;
+    padding: 20px;
+}
+
+#resetBtn {
+    color:#ffe4c4;
+    font-size: 20px;
+    margin: 15px;
+    border: solid 3px #412d28;
+    background-color: #4e342e;
+    border-radius:3px;
+}
+
+.btn{
+    height: 130px;
+    width: 130px;
+    border-radius:50%;
+    border: solid 3px #412d28;
+    background-color: #4e342e;
+    padding:auto;
+}
+
+.btn:hover, #resetBtn:hover{
+    background-color: #794543;
+}
