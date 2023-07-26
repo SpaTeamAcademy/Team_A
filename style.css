@@ -1,3 +1,4 @@
+/*Global*/
 *{
     font-family: 'Courier New';
     color: #4e342e;
@@ -32,7 +33,7 @@ a:hover, a:active{
     color: grey;
 }
 
-/*navigation*/
+/*Navigation*/
 nav{
     background-color: #577956;
     text-align: left;
@@ -119,4 +120,31 @@ li a:hover{
 }
 #scissorBtn {
     background-color: darkseagreen;
+}
+#outcome {
+    height: 20px;
+}
+.BtnContainer > button {
+    border-style: solid;
+    font-size: 70px;
+    padding: 20px;
+}
+#resetBtn {
+    color:#ffe4c4;
+    font-size: 20px;
+    margin: 15px;
+    border: solid 3px #412d28;
+    background-color: #4e342e;
+    border-radius:3px;
+}
+.btn{
+    height: 130px;
+    width: 130px;
+    border-radius:50%;
+    border: solid 3px #412d28;
+    background-color: #4e342e;
+    padding:auto;
+}
+.btn:hover, #resetBtn:hover{
+    background-color: #794543;
 }
