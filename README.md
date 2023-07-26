@@ -37,7 +37,7 @@ Das Projekt besteht darin eine Homepage zu programmieren, die folgende Funktione
 
 Commits & Pull Requests müssen dem folgenden Muster entsprechen:
 
-*Message:** [Asana ID] Letzte Änderung | Initialen der Person(en) die den Code reviewt haben _(bei Pull Requests)_
+**Message:** [Asana ID] Letzte Änderung | Initialen der Person(en) die den Code reviewt haben _(bei Pull Requests)_
 
 **Description:** Titel & Link zum Asana Task
 
