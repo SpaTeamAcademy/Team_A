@@ -62,7 +62,7 @@ li a:hover{
 .active{
     background-color: #fff2e2;
 }
-.Bttn{
+#modeBttn{
     height: 40px;
     width: 40px;
     border-radius: 50%;
