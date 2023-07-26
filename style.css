@@ -1,7 +1,6 @@
 /*Global*/
 *{
     font-family: 'Courier New';
-    font-size: 20px;
 }
 
 body{
@@ -49,6 +48,7 @@ a:hover, a:active{
     color: grey;
 }
 
+/*Navigation*/
 nav{
     background-color: #577956;
     text-align: left;
