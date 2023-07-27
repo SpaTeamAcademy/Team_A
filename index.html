@@ -3,29 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>final project-homepage</title> <!--This needs to be looked at if it is Ok/or not-->
+    <title>final project-homepage</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header> 
-        <!--here should the nav bar be-->
+        <nav class="navLinks">
+            <ul>
+                <li><a class="logo" style="color: rgb(105, 33, 97);">A</a></li>
+                <li><a href="index.html">home</a></li>
+                <li><a href="#">about the team</a></li>
+                <li><a href="rock-paper-scissor.html">rock, paper, scissors</a></li>
+                <li><a href="#">to-do list</a></li>
+                <li><a href="#">password generator</a></li>
+              <!--<button id="modeBttn"><img src="img\modeBttn.png" height="25px" width="25px" class="Bttn" alt="dark/light mode switch button"></button>-->
+            </ul>
+        </nav>
     </header>
     <main>
-       
-        <h1>This is our final project!</h1>
-        <p>On this site, you will find the game rock-paper-scissors, a to-do list, and a password generator.</p>
+        <div id="h1Background">
+            <br>
+            <h1 >This is our final project!</h1>
+        </div>
+        <p id="whatP">On this site, you will find the game rock-paper-scissors, a to-do list, and a password generator.</p>
+        <h2 id="aboutH2">About this website:</h2>
         <div class="AboutUs">
-            <h2>About this website:</h2>
-            <p>This was the final project of the coding basics course 2023. Our team consists of Io Bosse, Erik Herold Gergely, Jonathan Hawranek, Florian Werderits and Hannah Czeija.<a href="#">More information about the team including links to portfolios.[link to team page]</a> We made a few functions for this website, they consist of a game where you can play rock-paper-scissors against a computer, a to-do list maker, and a password generator. </p>
-            <img src="ImageAboutThisWebsite.jpg" width="100%" alt="">
+            <p >This was the final project of the coding basics course 2023. Our team consists of Io Bosse, Erik Herold Gergely, Jonathan Hawranek, Florian Werderits and Hannah Czeija.<a href="#" class="linkP">More information about the team including links to portfolios.[link to team page]</a> We made a few functions for this website, they consist of a game where you can play rock-paper-scissors against a computer, a to-do list maker, and a password generator. </p><br>
+        
+            <br><img src="img\ImageAboutThisWebsite.jpg" width="85%" alt="" id="imgAboutThis">
         </div>
     </main>
     <footer>
-        <a href="#">Bosse Io </a> 
-        <a href="#">Gergely Herold Erik</a>
-        <a href="#">Hawranek Jonathan</a>
-        <a href="#">Werderits Florian</a>
-        <a href="#">Czeija Hannah</a>
+        <div id="names">
+            <a href="#">Bosse Io </a> 
+            <a href="#">Gergely Erik Herold</a>
+            <a href="#">Hawranek Jonathan</a>
+            <a href="#">Werderits Florian</a>
+            <a href="#">Czeija Hannah</a>
+        </div>
     </footer>
 </body>
 </html>
