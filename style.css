@@ -95,11 +95,14 @@ li a:hover{
     padding-left: 25px;
 }
 .AboutUs{
-    text-align: justify;
+    text-align: left;
     column-count: 2;
-    column-gap: 280px;
-    padding-right: 15px;
-    padding-left: 15px;
+    column-gap: 100px;
+    padding-right: 10px;
+    padding-left: 25px;
+}
+#imgAboutThis{
+    float: right;
 }
 .linkP{
     font-size: 25px;
