@@ -1,5 +1,6 @@
 let accBtns = document.getElementsByClassName("accBtn");
 let accPanels = document.getElementsByClassName("accPanel");
+let footerLinks = document.getElementsByClassName("footerLink");
 
 for (let i=0;i<accBtns.length;i++) {
     accBtns[i].addEventListener("click", function(){
@@ -11,7 +12,20 @@ for (let i=0;i<accBtns.length;i++) {
     });
 }
 
+for(let i=0;i<footerLinks.length;i++){
+    footerLinks[i].addEventListener("click", function(){
+        for(j of accPanels){
+            j.style.display = "none";
+        }
+        accPanels[i].style.display = "block";
+    });
+}
+
 window.onload = function(){
+    accordion();
+}
+
+function accordion(){
     let url = new URL(window.location.toLocaleString());
     let name = url.hash;
     console.log(name);
