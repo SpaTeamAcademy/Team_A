@@ -29,23 +29,23 @@ function accordion(){
     let url = new URL(window.location.toLocaleString());
     let name = url.hash;
     console.log(name);
-    if(name === "#erik"){
+    if(name === "#io"){
         accPanels[0].style.display = "block";
     }
 
-    else if(name === "#florian"){
+    else if(name === "#erik"){
         accPanels[1].style.display = "block";
     }
 
-    else if(name === "#hannah"){
+    else if(name === "#johnny"){
         accPanels[2].style.display = "block";
     }
 
-    else if(name === "#io"){
+    else if(name === "#florian"){
         accPanels[3].style.display = "block";
     }
 
-    else if(name === "#johnny"){
+    else if(name === "#hannah"){
         accPanels[4].style.display = "block";
     }
 }
