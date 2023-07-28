@@ -149,6 +149,7 @@ nav{
     float: center;
     font-size: 25px;
     border: none;
+    word-break: break-word;
 }
 #inputButton{
     width: 4%;
