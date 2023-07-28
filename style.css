@@ -50,7 +50,8 @@ nav{
 }
 .navLi{
     float: left;
-}.navLi a{
+}
+.navLi a{
     display: inline-block;
     color: #ffe4c4;
     text-align: left;
