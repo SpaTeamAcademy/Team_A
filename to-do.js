@@ -10,7 +10,7 @@ function addItem() {
     if (newTask === "") {
         document.getElementById("invalid-input-warning").innerText = "invalid input";
     } else {
-        newItem.innerHTML = newTask;
+        newItem.innerText = newTask;
         document.getElementById("toDo-ul").appendChild(newItem);
     }
 
