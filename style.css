@@ -41,17 +41,16 @@ nav{
     padding-bottom: 0;
     margin-bottom: 0;
 }
-ul{
+#navLinks{
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color:  #577956;
 }
-li{
+.navLi{
     float: left;
-}
-li a{
+}.navLi a{
     display: inline-block;
     color: #ffe4c4;
     text-align: left;
@@ -59,7 +58,7 @@ li a{
     text-decoration: none;
     font-size: 24px;
 }
-li a:hover{
+.navLi a:hover{
     background-color: #435e42;
 }
 .active{
