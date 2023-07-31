@@ -41,17 +41,17 @@ nav{
     padding-bottom: 0;
     margin-bottom: 0;
 }
-ul{
+#navLinks{
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color:  #577956;
 }
-li{
+.navLi{
     float: left;
 }
-li a{
+.navLi a{
     display: inline-block;
     color: #ffe4c4;
     text-align: left;
@@ -59,7 +59,7 @@ li a{
     text-decoration: none;
     font-size: 24px;
 }
-li a:hover{
+.navLi a:hover{
     background-color: #435e42;
 }
 .active{
@@ -143,6 +143,8 @@ li a:hover{
     background-color: #794543;
 }
 
+
+/*Password Generator*/
 #length{
     width:190px;
 }
@@ -151,4 +153,50 @@ li a:hover{
     color:rgb(255, 0, 0);
     font-weight:bold;
     font-size:20px;
+}
+
+
+/*to-do list*/
+#toDoInput{
+    width: 80%;
+    float: center;
+    font-size: 25px;
+    border: none;
+    word-break: break-word;
+}
+#inputButton{
+    width: 4%;
+    background:  #4e342e;
+    color: #fff2e2;
+    text-align: center;
+    font-size: 25px;
+    cursor: pointer;
+    border: none;
+    float: center;
+    margin-left: 6px;
+}
+#inputButton:hover{
+    background-color: #794543;
+}
+#toDo-ul{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 15px;
+    list-style: none;
+    text-align: left;
+}
+#toDo-ul li{
+    font-size: 25px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.2s;
+    padding: 10px 10px 10px 10px;
+}
+#toDo-ul li:hover{
+    background-color: rgb(123, 147, 99);
+    color: #ffe4c4;
+}
+#invalid-input-warning{
+    color: #702963;
+    font-weight: bold;
 }

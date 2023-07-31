@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>final project-homepage</title>
+    <title>to-do list</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,19 +20,27 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <div id="h1Background">
+    <div id="h1ToDo">
+        <h1 >to-do list</h1>
+    </div>
+    <main id="to-doMain">
+        <!--<input type="text" id="toDoInput" placeholder="task">-->
+        <textarea id="toDoInput" name="toDoInput" rows="2" cols="50" placeholder="task"></textarea>
+        <button id="inputButton" onclick="addItem()">+</button>
+        <p id="invalid-input-warning"></p>
+        <ul id="toDo-ul">
             <br>
-            <h1 >This is our final project!</h1>
-        </div>
-        <p id="whatP">On this site, you will find the game rock-paper-scissors, a to-do list, and a password generator.</p>
-        <h2 id="aboutH2">About this website:</h2>
-        <div class="AboutUs">
-            <p >This was the final project of the coding basics course 2023. Our team consists of Io Bosse, Erik Herold Gergely, Jonathan Hawranek, Florian Werderits and Hannah Czeija.<a href="#" class="linkP">More information about the team including links to portfolios.[link to team page]</a> We made a few functions for this website, they consist of a game where you can play rock-paper-scissors against a computer, a to-do list maker, and a password generator. </p><br>
-        
-            <br><img src="img\ImageAboutThisWebsite.jpg" width="85%" alt="" id="imgAboutThis">
-        </div>
+        </ul>
     </main>
+    <br>
+    <br>
+    <br>   
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <footer>
         <div id="names">
             <a href="#">Bosse Io </a> 
@@ -42,5 +50,6 @@
             <a href="#">Czeija Hannah</a>
         </div>
     </footer>
+    <script src="to-do.js"></script>
 </body>
 </html>
