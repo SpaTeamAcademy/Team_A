@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to-do list</title>
     <link rel="stylesheet" href="style.css">
-    <title>rockpaperscissor</title>
 </head>
 <body>
     <header> 
@@ -20,29 +20,28 @@
             </ul>
         </nav>
     </header>
-    <main>
-    <h1>rock paper scissor</h1>
-
-
-    <h2 id="score-display"><score>00 : 00</score></h2>
-    <div id="outcome"> </div><br>
-<div class="BtnContainer">
-    <button id="rockBtn" class="btn">&#9994;&#127996;</button>
-    <button id="paperBtn" class="btn">&#9995;&#127996;</button>
-    <button id="scissorBtn" class="btn">&#9996;&#127996;</button>
-</div>
-<button id="resetBtn" onclick="reset()">reset</button>
-<script src="game.js"></script>
-</main>
-</body>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<footer>
+    <div id="h1ToDo">
+        <h1 >to-do list</h1>
+    </div>
+    <main id="to-doMain">
+        <!--<input type="text" id="toDoInput" placeholder="task">-->
+        <textarea id="toDoInput" name="toDoInput" rows="2" cols="50" placeholder="task"></textarea>
+        <button id="inputButton" onclick="addItem()">+</button>
+        <p id="invalid-input-warning"></p>
+        <ul id="toDo-ul">
+            <br>
+        </ul>
+    </main>
+    <br>
+    <br>
+    <br>   
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer>
         <div id="names">
             <a href="#">Bosse Io </a> 
             <a href="#">Gergely Erik Herold</a>
@@ -50,5 +49,7 @@
             <a href="#">Werderits Florian</a>
             <a href="#">Czeija Hannah</a>
         </div>
-</footer>
+    </footer>
+    <script src="to-do.js"></script>
+</body>
 </html>

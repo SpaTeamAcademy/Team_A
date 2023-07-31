@@ -72,6 +72,11 @@ function countScore(outcome){
     else if (outcome === "lose"){
             scorePc++
     }
+    if(scorePlayer>=100||scorePc>=100){
+        window.alert("100?! WOW, you are a true rock - paper - scissors enthusiast!"); // funny text
+        scorePlayer = 0;
+        scorePc = 0;
+    }
 }
 
 function displayScore(scorePlayer, scorePc){
@@ -101,5 +106,8 @@ function displayOutcome(player, computer, outcome){ //displays the outcome of th
 
 
 function reset() {
+    scorePlayer = 0;
+    scorePc = 0;
     document.getElementById("outcome").innerText = ""
+    displayScore(scorePlayer, scorePc)
 }
