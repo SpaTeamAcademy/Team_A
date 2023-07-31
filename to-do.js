@@ -1,4 +1,13 @@
+let count = 0;
 
+function Counter(operator){
+    if(operator === "plus"){
+        count++;
+    }else if(operator ==="minus"){
+        count--;
+    }
+    document.getElementById("toDoCount").innerText=count;
+}
 
 
 
@@ -13,6 +22,7 @@ function addItem() {
     } else {
         newItem.innerText = newTask;
         document.getElementById("toDo-ul").appendChild(newItem);
+        Counter("plus")
     }
 
     document.getElementById("toDoInput").value = ""

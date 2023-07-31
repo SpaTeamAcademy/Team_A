@@ -3,10 +3,38 @@ let RandomLetters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o"
 
 
 function GenerateButton(){
+    let length = checkInputValue();
     let Password ="";
-    for(let x=8;x>0;x--){
+
+    for(let x = length; x > 0; x--){
         let RandNumber = Math.floor(Math.random()*26);
         Password = Password + RandomLetters[RandNumber]; 
     }
     document.getElementById("PasswordDisplay").innerHTML = Password;
+}
+
+function checkInputValue(){
+    let input = document.getElementById("length").value;
+    let message = document.getElementById("lengthMsg");
+    message.innerText = "";
+
+    if(input === ""){
+        input = 8;
+        document.getElementById("length").value = 8;
+        message.innerText = "Length can not be empty.";
+    }
+
+    else if(input < 4){
+        input = 4;
+        document.getElementById("length").value = 4;
+        message.innerText = "Length can not be shorter than 4.";
+    }
+
+    else if(input > 50){
+        input = 50;
+        document.getElementById("length").value = 50;
+        message.innerText = "Length can not be longer than 50.";
+    }
+
+    return input;
 }
