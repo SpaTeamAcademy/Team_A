@@ -3,8 +3,9 @@ let RandomLetters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o"
 
 
 function GenerateButton(){
+    let length = document.getElementById("length").value;
     let Password ="";
-    for(let x = 8; x > 0; x--){
+    for(let x = length; x > 0; x--){
         let RandNumber = Math.floor(Math.random()*26);
         Password = Password + RandomLetters[RandNumber]; 
     }
