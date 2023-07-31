@@ -142,3 +142,7 @@ li a:hover{
 .btn:hover, #resetBtn:hover{
     background-color: #794543;
 }
+
+#length{
+    width:190px;
+}

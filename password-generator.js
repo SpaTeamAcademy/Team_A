@@ -15,6 +15,7 @@ function GenerateButton(){
 
 function checkInputValue(){
     let input = document.getElementById("length").value;
+    
 
     if(input === ""){
         input = 8;
