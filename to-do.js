@@ -13,14 +13,8 @@ function addItem() {
     } else {
         newItem.innerText = newTask;
         document.getElementById("toDo-ul").appendChild(newItem);
-        var deleteButton = document.createElement("button");
-        deleteButton.innerText = "X";
-        document.getElementById("toDo-ul").appendChild(deleteButton);
     }
 
     document.getElementById("toDoInput").value = ""
 }
 
-function deleteItem(){
-
-}
