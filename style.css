@@ -3,9 +3,17 @@
     font-family: 'Courier New';
     color: #4e342e;
 }
+html{
+    height: 100%
+}
 body{
     background-color: bisque;
     text-align: center;
+    height: 100%;
+}
+header{
+    height: 100px;
+    width: 100%;
 }
 h1{
     font-size: 50px;
@@ -16,14 +24,26 @@ h2{
 h3{
     font-size: 32px;
 }
+main {
+    padding-bottom: 200px;
+    height: 100%;
+}
 p{
     font-size: 25px;
 }
 footer{
     text-align: center;
     border-top: solid 2px;
-    padding-top: 25px;
-    margin-top: 50px;
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.all{
+    min-height: 100%;
+    position: relative;
 }
 a{ 
     text-decoration: none;
@@ -192,3 +212,4 @@ nav{
     font-size: 20px;
     margin-right: 50px;
 }
+
