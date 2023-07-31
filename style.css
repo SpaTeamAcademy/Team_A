@@ -143,6 +143,19 @@ nav{
     background-color: #794543;
 }
 
+
+/*Password Generator*/
+#length{
+    width:190px;
+}
+
+#lengthMsg{
+    color:rgb(255, 0, 0);
+    font-weight:bold;
+    font-size:20px;
+}
+
+
 /*to-do list*/
 #toDoInput{
     width: 80%;
