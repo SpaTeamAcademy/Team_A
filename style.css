@@ -141,7 +141,9 @@ nav{
 }
 #outcome {
     height: 20px;
-    margin-bottom:40px;
+    margin-bottom:80px;
+    font-size:25px;
+    font-weight:bold;
 }
 .BtnContainer > button {
     border-style: solid;
@@ -167,6 +169,11 @@ nav{
 .btn:hover, #resetBtn:hover, .btn:focus{
     background-color: #794543;
 }
+#score-display{
+    text-align:right;
+    margin-right:45%;
+}
+
 
 /*Teampage*/
 .accBtn{
@@ -205,10 +212,6 @@ nav{
     margin-right:30px;
 }
 
-#score-display{
-    text-align:right;
-    margin-right:45%;
-}
 
 
 /*Password Generator*/
