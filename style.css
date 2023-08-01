@@ -147,7 +147,7 @@ nav{
     font-size: 70px;
     padding: 20px;
 }
-#resetBtn {
+#resetBtn, #generate-button {
     color:#ffe4c4;
     font-size: 20px;
     margin: 15px;
@@ -163,7 +163,7 @@ nav{
     background-color: #4e342e;
     padding:auto;
 }
-.btn:hover, #resetBtn:hover{
+.btn:hover, #resetBtn:hover, #generate-button:hover{
     background-color: #794543;
 }
 
@@ -210,7 +210,6 @@ nav{
 }
 
 
-
 /*to-do list*/
 #toDoInput{
     width: 80%;
@@ -221,14 +220,15 @@ nav{
 }
 #inputButton{
     width: 4%;
-    background:  #4e342e;
-    color: #fff2e2;
     text-align: center;
-    font-size: 25px;
     cursor: pointer;
-    border: none;
     float: center;
-    margin-left: 6px;
+    color:#ffe4c4;
+    font-size: 20px;
+    margin: 15px;
+    border: solid 3px #412d28;
+    background-color: #4e342e;
+    border-radius:3px;
 }
 #inputButton:hover{
     background-color: #794543;
@@ -252,8 +252,9 @@ nav{
     color: #ffe4c4;
 }
 #invalid-input-warning{
-    color: #702963;
-    font-weight: bold;
+    color:rgb(255, 0, 0);
+    font-weight:bold;
+    font-size:20px;
 }
 #toDoCount{
     text-align: right;
@@ -266,8 +267,9 @@ nav{
     color:#ffe4c4;
     font-size: 20px;
     margin: 15px;
-    border: solid 3px #412d28;
-    background-color: #4e342e;
+    border: solid 3px #7b9363;
+    /*background-color: #4e342e;*/
+    background-color: bisque;
     border-radius:3px; 
 }
 .delete-button:hover{
