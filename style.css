@@ -205,10 +205,12 @@ nav{
 /*to-do list*/
 #toDoInput{
     width: 80%;
+    height:90px;
     float: center;
     font-size: 25px;
     border: none;
     word-break: break-word;
+    resize:none;
 }
 #inputButton{
     width: 4%;
