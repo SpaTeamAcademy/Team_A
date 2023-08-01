@@ -94,11 +94,11 @@ function displayOutcome(player, computer, outcome){ //displays the outcome of th
         output = "We both chose " + player + ".<br> Nobody wins.";
     }
     else if(outcome === "win"){
-        output = "You choose " + player + ".<br>" + "I choose " + computer + ".<br>" + player + " beats " + computer + ". You win.";
+        output = "You chose " + player + ".<br>" + "I chose " + computer + ".<br>" + player + " beats " + computer + ". You win.";
     }
     else if(outcome === "lose"){
         
-        output = "You choose " + player + ".<br>" + "I choose " + computer + ".<br>" + computer + " beats " + player + ". I win.";
+        output = "You chose " + player + ".<br>" + "I chose " + computer + ".<br>" + computer + " beats " + player + ". I win.";
     }
 
     console.log(output);
