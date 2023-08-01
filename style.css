@@ -24,6 +24,10 @@ h2{
 h3{
     font-size: 32px;
 }
+main {
+    padding-bottom: 200px;
+    height: 100%;
+}
 p{
     font-size: 25px;
 }
@@ -256,3 +260,4 @@ nav{
     font-size: 20px;
     margin-right: 50px;
 }
+
