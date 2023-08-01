@@ -65,16 +65,18 @@ nav{
 .active{
     background-color: #fff2e2;
 }
-#modeBttn{
-    height: 33px;
-    width: 33px;
-    border-radius: 50%;
+#logo{
+    height: 42px;
+    width: 42px;
     background-color: transparent;
     overflow: hidden;
     border: none;
     padding: 0;
     margin: 0;
-    padding-top: 8px;
+    padding-top: 4px;
+    padding-right: 20px;
+    padding-bottom: 4px;
+    float: right;
 }
 
 /*homepage*/
