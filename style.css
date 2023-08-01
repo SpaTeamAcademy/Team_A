@@ -87,16 +87,18 @@ nav{
 .active{
     background-color: #fff2e2;
 }
-#modeBttn{
-    height: 33px;
-    width: 33px;
-    border-radius: 50%;
+#logo{
+    height: 42px;
+    width: 42px;
     background-color: transparent;
     overflow: hidden;
     border: none;
     padding: 0;
     margin: 0;
-    padding-top: 8px;
+    padding-top: 4px;
+    padding-right: 20px;
+    padding-bottom: 4px;
+    float: right;
 }
 
 /*homepage*/
@@ -139,6 +141,7 @@ nav{
 }
 #outcome {
     height: 20px;
+    margin-bottom:40px;
 }
 .BtnContainer > button {
     border-style: solid;
@@ -161,12 +164,14 @@ nav{
     background-color: #4e342e;
     padding:auto;
 }
-.btn:hover, #resetBtn:hover{
+.btn:hover, #resetBtn:hover, .btn:focus{
     background-color: #794543;
 }
 
+/*Teampage*/
 .accBtn{
-    width:100%;
+    margin: 0% 10%;
+    width:80%;
     text-align:left;
     vertical-align:middle;
     margin-bottom:2px;
@@ -181,6 +186,12 @@ nav{
     background-color:#93a975;
 }
 
+.accPanel{
+    width:80%;
+    margin: 0% 10%;
+    text-align:left;
+}
+
 .teamImg{
     width:150px;
     height:150px;
@@ -190,9 +201,13 @@ nav{
 
 .status{
     font-size:80px;
-    position: absolute;
-    right: 0;
+    margin-left:auto;
     margin-right:30px;
+}
+
+#score-display{
+    text-align:right;
+    margin-right:45%;
 }
 
 
@@ -212,10 +227,12 @@ nav{
 /*to-do list*/
 #toDoInput{
     width: 80%;
+    height:90px;
     float: center;
     font-size: 25px;
     border: none;
     word-break: break-word;
+    resize:none;
 }
 #inputButton{
     width: 4%;
@@ -255,6 +272,7 @@ nav{
 }
 #toDoCount{
     text-align: right;
+    font-weight:bold;
     font-size: 20px;
     margin-right: 50px;
 }
