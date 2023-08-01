@@ -25,8 +25,10 @@
     </div>
     <main id="to-doMain">
         <!--<input type="text" id="toDoInput" placeholder="task">-->
-        <textarea id="toDoInput" name="toDoInput" rows="2" cols="50" placeholder="task"></textarea>
-        <button id="inputButton" onclick="addItem()">+</button>
+        <div id="inputArea">
+            <textarea id="toDoInput" name="toDoInput" rows="2" cols="50" placeholder="task"></textarea>
+            <button id="inputButton" onclick="addItem()">+</button>
+        </div>
         <p id="invalid-input-warning"></p>
         <p id="toDoCount"></p>
         <ul id="toDo-ul">

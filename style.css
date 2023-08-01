@@ -228,6 +228,11 @@ nav{
 
 
 /*to-do list*/
+#inputArea{
+    display:flex;
+    justify-content: center;
+}
+
 #toDoInput{
     width: 80%;
     height:90px;
@@ -239,6 +244,7 @@ nav{
 }
 #inputButton{
     width: 4%;
+    height:30px;
     background:  #4e342e;
     color: #fff2e2;
     text-align: center;
@@ -247,6 +253,7 @@ nav{
     border: none;
     float: center;
     margin-left: 6px;
+    align-self:flex-end;
 }
 #inputButton:hover{
     background-color: #794543;
@@ -270,13 +277,13 @@ nav{
     color: #ffe4c4;
 }
 #invalid-input-warning{
-    color: #702963;
+    color: #ff0000;
     font-weight: bold;
 }
 #toDoCount{
-    text-align: right;
+    text-align: left;
     font-weight:bold;
     font-size: 20px;
-    margin-right: 50px;
+    margin-left: 7.5%;
 }
 
