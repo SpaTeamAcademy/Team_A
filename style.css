@@ -146,6 +146,7 @@ nav{
     background-color: #794543;
 }
 
+/*Teampage*/
 .accBtn{
     margin: 0% 10%;
     width:80%;
@@ -161,6 +162,12 @@ nav{
 
 .accBtn:hover{
     background-color:#93a975;
+}
+
+.accPanel{
+    width:80%;
+    margin: 0% 10%;
+    text-align:left;
 }
 
 .teamImg{
