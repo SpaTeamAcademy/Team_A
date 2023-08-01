@@ -83,7 +83,7 @@ function displayScore(scorePlayer, scorePc){
     if (scorePlayer < 10) { scorePlayer = "0" + scorePlayer};
     if (scorePc < 10) {scorePc = "0" + scorePc};
 
-    document.getElementById("score-display").innerText = scorePlayer + " : " + scorePc;
+    document.getElementById("score-display").innerHTML = "You: " + scorePlayer + "<br>" + "PC: " + scorePc;
 }
 
 function displayOutcome(player, computer, outcome){ //displays the outcome of the game in HTML and the console
@@ -91,17 +91,18 @@ function displayOutcome(player, computer, outcome){ //displays the outcome of th
 
 
     if(outcome === "draw"){
-        output = "We both chose " + player + ". Nobody wins.";
+        output = "We both chose " + player + ".<br> Nobody wins.";
     }
     else if(outcome === "win"){
-        output = player + " beats " + computer + ". You win.";
+        output = "You choose " + player + ".<br>" + "I choose " + computer + ".<br>" + player + " beats " + computer + ". You win.";
     }
     else if(outcome === "lose"){
-        output = computer + " beats " + player + ". I win.";
+        
+        output = "You choose " + player + ".<br>" + "I choose " + computer + ".<br>" + computer + " beats " + player + ". I win.";
     }
 
     console.log(output);
-    document.getElementById("outcome").innerText = output;
+    document.getElementById("outcome").innerHTML = output;
 }
 
 

@@ -119,6 +119,7 @@ nav{
 }
 #outcome {
     height: 20px;
+    margin-bottom:40px;
 }
 .BtnContainer > button {
     border-style: solid;
@@ -141,7 +142,7 @@ nav{
     background-color: #4e342e;
     padding:auto;
 }
-.btn:hover, #resetBtn:hover{
+.btn:hover, #resetBtn:hover, .btn:focus{
     background-color: #794543;
 }
 
@@ -173,6 +174,11 @@ nav{
     position: absolute;
     right: 0;
     margin-right:30px;
+}
+
+#score-display{
+    text-align:right;
+    margin-right:45%;
 }
 
 
@@ -235,6 +241,7 @@ nav{
 }
 #toDoCount{
     text-align: right;
+    font-weight:bold;
     font-size: 20px;
     margin-right: 50px;
 }
