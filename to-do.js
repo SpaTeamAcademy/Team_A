@@ -19,7 +19,8 @@ function addItem() {
     var deleteButton = document.createElement("button");
     deleteButton.innerText = "X";
     deleteButton.className = "delete-button";
-    deleteButton.addEventListener("click", function(){this.parentElement.remove()});;
+    deleteButton.addEventListener("click", function(){this.parentElement.remove()}); 
+    deleteButton.addEventListener("click", function(){Counter("minus")}); 
 
     document.getElementById("invalid-input-warning").innerText = "";
 
@@ -29,7 +30,7 @@ function addItem() {
         newItem.innerText = newTask;
         newItem.appendChild(deleteButton);
         document.getElementById("toDo-ul").appendChild(newItem);
-        Counter("plus")
+        Counter("plus");
     }
 
     document.getElementById("toDoInput").value = ""
