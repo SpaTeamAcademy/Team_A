@@ -173,6 +173,11 @@ nav{
     margin-right:30px;
 }
 
+#score-display{
+    text-align:right;
+    margin-right:45%;
+}
+
 
 /*Password Generator*/
 #length{

@@ -83,7 +83,7 @@ function displayScore(scorePlayer, scorePc){
     if (scorePlayer < 10) { scorePlayer = "0" + scorePlayer};
     if (scorePc < 10) {scorePc = "0" + scorePc};
 
-    document.getElementById("score-display").innerText = scorePlayer + " : " + scorePc;
+    document.getElementById("score-display").innerHTML = "You: " + scorePlayer + "<br>" + "PC: " + scorePc;
 }
 
 function displayOutcome(player, computer, outcome){ //displays the outcome of the game in HTML and the console
