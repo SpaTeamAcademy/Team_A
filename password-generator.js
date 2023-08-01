@@ -72,3 +72,18 @@ function MainRando(){
     }    
         return Random;
     }
+
+
+    function Checkall(){
+        let TestChecked = 0;
+        if(document.getElementById("klein").checked){TestChecked++}
+        if(document.getElementById("gross").checked){TestChecked++}
+        if(document.getElementById("sonder").checked){TestChecked++}
+        if(document.getElementById("zahl").checked){TestChecked++}
+        return TestChecked;
+    }
+    
+    function Checkabc(){if(Checkall()==0){document.getElementById("klein").checked = true;}}
+    function CheckABC(){if(Checkall()==0){document.getElementById("gross").checked = true;}}
+    function CheckSonder(){if(Checkall()==0){document.getElementById("sonder").checked = true;}}
+    function CheckZahl(){if(Checkall()==0){document.getElementById("zahl").checked = true;}}
