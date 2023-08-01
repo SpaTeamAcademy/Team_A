@@ -117,6 +117,7 @@ nav{
 }
 #outcome {
     height: 20px;
+    margin-bottom:40px;
 }
 .BtnContainer > button {
     border-style: solid;
