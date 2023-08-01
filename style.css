@@ -261,3 +261,18 @@ nav{
     margin-right: 50px;
 }
 
+.delete-button{
+    align-self: flex-end;
+    color:#ffe4c4;
+    font-size: 20px;
+    margin: 15px;
+    border: solid 3px #412d28;
+    background-color: #4e342e;
+    border-radius:3px; 
+}
+.delete-button:hover{
+    background-color: #794543;
+}
+
+
+
