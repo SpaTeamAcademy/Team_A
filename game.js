@@ -10,7 +10,7 @@ function play(player){//main function, gets the player's choice as a number
     console.log("Player picks " + player);
     let computer = pickRandom();
     let outcome = compare(player, computer);
-    displayOutcome(player, computer, outcome);
+    displayOutcome(toEmoji(player), toEmoji(computer), outcome);
     countScore(outcome)
     displayScore(scorePlayer, scorePc)
 }
@@ -111,4 +111,16 @@ function reset() {
     scorePc = 0;
     document.getElementById("outcome").innerText = ""
     displayScore(scorePlayer, scorePc)
+}
+
+function toEmoji(text){
+    if(text === "rock"){
+        return "&#9994;&#127996;";
+    }
+    else if(text === "paper"){
+        return "&#9995;&#127996;";
+    }
+    else if(text ==="scissors"){
+        return "&#9996;&#127996;";
+    }
 }
