@@ -10,7 +10,7 @@ function play(player){//main function, gets the player's choice as a number
     console.log("Player picks " + player);
     let computer = pickRandom();
     let outcome = compare(player, computer);
-    displayOutcome(player, computer, outcome);
+    displayOutcome(toEmoji(player), toEmoji(computer), outcome);
     countScore(outcome)
     displayScore(scorePlayer, scorePc)
 }
@@ -83,7 +83,7 @@ function displayScore(scorePlayer, scorePc){
     if (scorePlayer < 10) { scorePlayer = "0" + scorePlayer};
     if (scorePc < 10) {scorePc = "0" + scorePc};
 
-    document.getElementById("score-display").innerText = scorePlayer + " : " + scorePc;
+    document.getElementById("score-display").innerHTML = "You: " + scorePlayer + "<br>" + "PC: " + scorePc;
 }
 
 function displayOutcome(player, computer, outcome){ //displays the outcome of the game in HTML and the console
@@ -91,17 +91,18 @@ function displayOutcome(player, computer, outcome){ //displays the outcome of th
 
 
     if(outcome === "draw"){
-        output = "We both chose " + player + ". Nobody wins.";
+        output = output = "You chose " + player + ".<br>" + "Computer also chose " + computer + ".<br> Nobody wins.";
     }
     else if(outcome === "win"){
-        output = player + " beats " + computer + ". You win.";
+        output = "You chose " + player + ".<br>" + "Computer chose " + computer + ".<br>" + player + " beats " + computer + ". You win.";
     }
     else if(outcome === "lose"){
-        output = computer + " beats " + player + ". I win.";
+        
+        output = "You chose " + player + ".<br>" + "Computer chose " + computer + ".<br>" + computer + " beats " + player + ". Computer wins.";
     }
 
     console.log(output);
-    document.getElementById("outcome").innerText = output;
+    document.getElementById("outcome").innerHTML = output;
 }
 
 
@@ -110,4 +111,16 @@ function reset() {
     scorePc = 0;
     document.getElementById("outcome").innerText = ""
     displayScore(scorePlayer, scorePc)
+}
+
+function toEmoji(text){
+    if(text === "rock"){
+        return "&#9994;&#127996;";
+    }
+    else if(text === "paper"){
+        return "&#9995;&#127996;";
+    }
+    else if(text ==="scissors"){
+        return "&#9996;&#127996;";
+    }
 }
