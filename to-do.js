@@ -14,7 +14,7 @@ function Counter(operator){
 function addItem() {
     var newTask = document.getElementById("toDoInput").value;
     var newItem = document.createElement("li");
-    newItem.className = "undone-task";
+    newItem.className = "new-task";
 
     var deleteButton = document.createElement("button");
     deleteButton.innerText = "X";
@@ -47,7 +47,7 @@ function addItem() {
 function moveItem(){
     
     var doneItem = document.createElement("li");
-    doneItem.className = "done-task";
+    doneItem.className = "finished-task";
     doneItem.innerHTML = (this.parentElement.innerText.slice(0,-2));
 
     var deleteButton = document.createElement("button");
