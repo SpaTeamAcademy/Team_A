@@ -237,8 +237,10 @@ nav{
 #PasswordDisplay{
     border: solid 3px #412d28;
     width: 700px;
+    width: 55%;
     text-align: center;
-    margin-left: 22%;
+    margin-left: 22.5%;
+    margin-right: 22.5%;
     height: 60px;
     color: #4e342e;
     background-color:#e6c1ca;
