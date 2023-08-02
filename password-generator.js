@@ -9,14 +9,18 @@ function GenerateButton(){
     let length = checkInputValue();
     let Password ="";
     let Random = MainRando();
-    console.log(document.getElementById("klein").value);
     
     for(let x = length-Checkall(); x > 0; x--){
         let RandNumber = Math.floor(Math.random()*Random.length);
         Password = Password + Random[RandNumber]; 
     }
     //Add RandomLetter/Gross/Sonder/Zahlen to Password here amount of words reduced by length-Checkall
-    document.getElementById("PasswordDisplay").innerHTML = Password;
+    Password = Password.split();  //changes Password to Array
+    if(document.getElementById("klein").checked){Password.splice(Math.floor(Math.random()*Password.length),0,RandomLetters[Math.floor(Math.random()*RandomLetters.length)])}
+    if(document.getElementById("gross").checked){Password.splice(Math.floor(Math.random()*Password.length),0,RandomLettersGross[Math.floor(Math.random()*RandomLettersGross.length)])}
+    if(document.getElementById("sonder").checked){Password.splice(Math.floor(Math.random()*Password.length),0,RandomLettersSonder[Math.floor(Math.random()*RandomLettersSonder.length)])}
+    if(document.getElementById("zahl").checked){Password.splice(Math.floor(Math.random()*Password.length),0,RandomZahlen[Math.floor(Math.random()*RandomZahlen.length)])}
+    document.getElementById("PasswordDisplay").innerHTML = Password.join("");
 }
 
 function checkInputValue(){
