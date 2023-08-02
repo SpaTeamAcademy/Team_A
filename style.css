@@ -323,6 +323,7 @@ nav{
    	width: 35px;
    	vertical-align: middle;
     text-align: center;
+    font-weight: 500;
 }
 .delete-button:hover,.check-button:hover{
     color: bisque;
