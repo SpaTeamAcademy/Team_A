@@ -43,14 +43,24 @@ function addItem() {
     document.getElementById("toDoInput").value = ""
 }
 
+
 function moveItem(){
     
     var doneItem = document.createElement("li");
     doneItem.className = "done-task";
     doneItem.innerHTML = (this.parentElement.innerText.slice(0,-2));
+
+    var deleteButton = document.createElement("button");
+    deleteButton.innerText = "X";
+    deleteButton.className = "delete-button";
+    deleteButton.addEventListener("click", function(){this.parentElement.remove()}); 
+  
+    doneItem.appendChild(deleteButton);
     document.getElementById("done-ul").appendChild(doneItem);
+
     this.parentElement.remove();
     Counter("minus");
+    
 }
 
 
