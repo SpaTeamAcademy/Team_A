@@ -3,7 +3,7 @@ let RandomLettersGross = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N
 let RandomLettersSonder = ["!","#","$","%","(",")","*","+",",","-",".","/",":",";","=","?","@","[","]","^","_","{","|","}","~"];
 let RandomZahlen = ["0","1","2","3","4","5","6","7","8","9"];
 let Random = [];
-document.getElementById("klein").checked = true;
+document.getElementById("small").checked = true;
 
 function GenerateButton(){
     let length = checkInputValue();
@@ -16,10 +16,10 @@ function GenerateButton(){
     }
     //Add RandomLetter/Gross/Sonder/Zahlen to Password here amount of words reduced by length-Checkall
     Password = Password.split();  //changes Password to Array
-    if(document.getElementById("klein").checked){Password.splice(Math.floor(Math.random()*Password.length),0,RandomLetters[Math.floor(Math.random()*RandomLetters.length)])}
-    if(document.getElementById("gross").checked){Password.splice(Math.floor(Math.random()*Password.length),0,RandomLettersGross[Math.floor(Math.random()*RandomLettersGross.length)])}
+    if(document.getElementById("small").checked){Password.splice(Math.floor(Math.random()*Password.length),0,RandomLetters[Math.floor(Math.random()*RandomLetters.length)])}
+    if(document.getElementById("big").checked){Password.splice(Math.floor(Math.random()*Password.length),0,RandomLettersGross[Math.floor(Math.random()*RandomLettersGross.length)])}
     if(document.getElementById("sonder").checked){Password.splice(Math.floor(Math.random()*Password.length),0,RandomLettersSonder[Math.floor(Math.random()*RandomLettersSonder.length)])}
-    if(document.getElementById("zahl").checked){Password.splice(Math.floor(Math.random()*Password.length),0,RandomZahlen[Math.floor(Math.random()*RandomZahlen.length)])}
+    if(document.getElementById("number").checked){Password.splice(Math.floor(Math.random()*Password.length),0,RandomZahlen[Math.floor(Math.random()*RandomZahlen.length)])}
     document.getElementById("PasswordDisplay").innerHTML = Password.join("");
 }
 
@@ -52,13 +52,13 @@ function checkInputValue(){
 
 function MainRando(){
     Random=[];
-    if(document.getElementById("klein").checked){
+    if(document.getElementById("small").checked){
         for(let x=0;x<RandomLetters.length;x++){
         Random.push(RandomLetters[x]);
         }
     }
 
-    if(document.getElementById("gross").checked){
+    if(document.getElementById("big").checked){
         for(let x=0;x<RandomLettersGross.length;x++){
         Random.push(RandomLettersGross[x]);
         }
@@ -70,7 +70,7 @@ function MainRando(){
         }
     }    
 
-    if(document.getElementById("zahl").checked){
+    if(document.getElementById("number").checked){
         for(let x=0;x<RandomZahlen.length;x++){
         Random.push(RandomZahlen[x]);
         }
@@ -81,14 +81,14 @@ function MainRando(){
 
     function Checkall(){
         let TestChecked = 0;
-        if(document.getElementById("klein").checked){TestChecked++}
-        if(document.getElementById("gross").checked){TestChecked++}
+        if(document.getElementById("small").checked){TestChecked++}
+        if(document.getElementById("big").checked){TestChecked++}
         if(document.getElementById("sonder").checked){TestChecked++}
-        if(document.getElementById("zahl").checked){TestChecked++}
+        if(document.getElementById("number").checked){TestChecked++}
         return TestChecked;
     }
     
-    function Checkabc(){if(Checkall()==0){document.getElementById("klein").checked = true;}}
-    function CheckABC(){if(Checkall()==0){document.getElementById("gross").checked = true;}}
+    function Checkabc(){if(Checkall()==0){document.getElementById("small").checked = true;}}
+    function CheckABC(){if(Checkall()==0){document.getElementById("big").checked = true;}}
     function CheckSonder(){if(Checkall()==0){document.getElementById("sonder").checked = true;}}
-    function CheckZahl(){if(Checkall()==0){document.getElementById("zahl").checked = true;}}
+    function CheckZahl(){if(Checkall()==0){document.getElementById("number").checked = true;}}
