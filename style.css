@@ -218,13 +218,34 @@ nav{
 #length{
     width:190px;
 }
-
 #lengthMsg{
     color:rgb(255, 0, 0);
     font-weight:bold;
     font-size:20px;
 }
-
+#length{
+    font-size: 25px;
+    border: none;
+    word-break: break-word;
+    resize:none;
+    width: 300px;
+}
+#labelLength{
+    font-size: 25px;
+    margin-left: 2%;
+}
+#PasswordDisplay{
+    border: solid 3px #412d28;
+    width: 700px;
+    text-align: center;
+    margin-left: 22%;
+    height: 60px;
+    color: #4e342e;
+    background-color:#e6c1ca;
+    overflow-y: hidden;
+    overflow: auto;
+    padding: 0 5px 0 5px;
+}
 
 /*to-do list*/
 #inputArea{

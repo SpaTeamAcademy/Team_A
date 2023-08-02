@@ -21,7 +21,7 @@ function checkInputValue(){
     if(input === ""){
         input = 8;
         document.getElementById("length").value = 8;
-        message.innerText = "Length can not be empty.";
+        message.innerText = "Using default Length.";
     }
 
     else if(input < 4){
