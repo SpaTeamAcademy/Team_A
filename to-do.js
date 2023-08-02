@@ -14,13 +14,19 @@ function Counter(operator){
 function addItem() {
     var newTask = document.getElementById("toDoInput").value;
     var newItem = document.createElement("li");
-    newItem.className = "undone-task";
+    newItem.className = "new-task";
 
     var deleteButton = document.createElement("button");
     deleteButton.innerText = "X";
     deleteButton.className = "delete-button";
     deleteButton.addEventListener("click", function(){this.parentElement.remove()}); 
     deleteButton.addEventListener("click", function(){Counter("minus")}); 
+
+    var checkButton = document.createElement("button");
+    checkButton.innerHTML = "&#10003";
+    checkButton.className = "check-button";
+    checkButton.onclick = moveItem;
+    
 
     document.getElementById("invalid-input-warning").innerText = "";
 
@@ -29,10 +35,32 @@ function addItem() {
     } else {
         newItem.innerText = newTask;
         newItem.appendChild(deleteButton);
+        newItem.appendChild(checkButton);
         document.getElementById("toDo-ul").appendChild(newItem);
         Counter("plus");
     }
 
     document.getElementById("toDoInput").value = ""
 }
+
+
+function moveItem(){
+    
+    var doneItem = document.createElement("li");
+    doneItem.className = "finished-task";
+    doneItem.innerHTML = (this.parentElement.innerText.slice(0,-2));
+
+    var deleteButton = document.createElement("button");
+    deleteButton.innerText = "X";
+    deleteButton.className = "delete-button";
+    deleteButton.addEventListener("click", function(){this.parentElement.remove()}); 
+  
+    doneItem.appendChild(deleteButton);
+    document.getElementById("done-ul").appendChild(doneItem);
+
+    this.parentElement.remove();
+    Counter("minus");
+    
+}
+
 
