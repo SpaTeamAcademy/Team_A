@@ -235,7 +235,7 @@ nav{
     margin-left: 2%;
 }
 #PasswordDisplay{
-    border: solid 3px #412d28;
+   /* border: solid 3px #412d28;*/
     width: 700px;
     width: 55%;
     text-align: center;
@@ -244,9 +244,11 @@ nav{
     height: 60px;
     color: #4e342e;
     background-color:#e6c1ca;
+    background-color: #e8bcc1;
     overflow-y: hidden;
     overflow: auto;
     padding: 0 5px 0 5px;
+    padding-top: 18px;
 }
 
 /*to-do list*/
