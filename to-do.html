@@ -6,17 +6,17 @@
     <title>to-do list</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<div class="all">
 <body>
     <header> 
         <nav>
             <ul id="navLinks">
-                <li class="navLi"><a class="logo" style="color: rgb(105, 33, 97);">A</a></li>
                 <li class="navLi"><a href="index.html">home</a></li>
-                <li class="navLi"><a href="#">about the team</a></li>
+                <li class="navLi"><a href="teampage.html">about the team</a></li>
                 <li class="navLi"><a href="rock-paper-scissor.html">rock, paper, scissors</a></li>
                 <li class="navLi"><a href="to-do.html">to-do list</a></li>
                 <li class="navLi"><a href="password-generator.html">password generator</a></li>
-              <!--<button id="modeBttn"><img src="img\modeBttn.png" height="25px" width="25px" class="Bttn" alt="dark/light mode switch button"></button>-->
+                <img id="logo" src="img\tree.png" alt="">
             </ul>
         </nav>
     </header>
@@ -25,23 +25,17 @@
     </div>
     <main id="to-doMain">
         <!--<input type="text" id="toDoInput" placeholder="task">-->
-        <textarea id="toDoInput" name="toDoInput" rows="2" cols="50" placeholder="task"></textarea>
-        <button id="inputButton" onclick="addItem()">+</button>
+        <div id="inputArea">
+            <textarea id="toDoInput" name="toDoInput" rows="2" cols="50" placeholder="task"></textarea>
+            <button id="inputButton" onclick="addItem()">+</button>
+        </div>
         <p id="invalid-input-warning"></p>
         <p id="toDoCount"></p>
         <ul id="toDo-ul">
             <br>
         </ul>
     </main>
-    <br>
-    <br>
-    <br>   
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+</body>
     <footer>
         <div id="names">
             <a href="teampage.html#io">Bosse Io </a> 
@@ -52,5 +46,5 @@
         </div>
     </footer>
     <script src="to-do.js"></script>
-</body>
+</div>
 </html>

@@ -3,9 +3,19 @@
     font-family: 'Courier New';
     color: #4e342e;
 }
+html{
+    height: 100%
+}
 body{
     background-color: bisque;
     text-align: center;
+    height: 100%;
+}
+
+header{
+    margin-bottom: 0;
+    padding-bottom: 0;
+    width: 100%;
 }
 h1{
     font-size: 50px;
@@ -16,14 +26,22 @@ h2{
 h3{
     font-size: 32px;
 }
+main {
+    padding-bottom: 200px;
+    height: 100%;
+}
 p{
     font-size: 25px;
 }
 footer{
     text-align: center;
     border-top: solid 2px;
-    padding-top: 25px;
-    margin-top: 50px;
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 a{ 
     text-decoration: none;
@@ -31,6 +49,10 @@ a{
 }
 a:hover, a:active{
     color: grey;
+}
+.all{
+    min-height: 100%;
+    position: relative;
 }
 
 /*Navigation*/
@@ -65,16 +87,18 @@ nav{
 .active{
     background-color: #fff2e2;
 }
-#modeBttn{
-    height: 33px;
-    width: 33px;
-    border-radius: 50%;
+#logo{
+    height: 42px;
+    width: 42px;
     background-color: transparent;
     overflow: hidden;
     border: none;
     padding: 0;
     margin: 0;
-    padding-top: 8px;
+    padding-top: 4px;
+    padding-right: 20px;
+    padding-bottom: 4px;
+    float: right;
 }
 
 /*homepage*/
@@ -117,6 +141,9 @@ nav{
 }
 #outcome {
     height: 20px;
+    margin-bottom:80px;
+    font-size:25px;
+    font-weight:bold;
 }
 .BtnContainer > button {
     border-style: solid;
@@ -139,12 +166,19 @@ nav{
     background-color: #4e342e;
     padding:auto;
 }
-.btn:hover, #resetBtn:hover{
+.btn:hover, #resetBtn:hover, .btn:focus{
     background-color: #794543;
 }
+#score-display{
+    text-align:right;
+    margin-right:45%;
+}
 
+
+/*Teampage*/
 .accBtn{
-    width:100%;
+    margin: 0% 10%;
+    width:80%;
     text-align:left;
     vertical-align:middle;
     margin-bottom:2px;
@@ -159,6 +193,12 @@ nav{
     background-color:#93a975;
 }
 
+.accPanel{
+    width:80%;
+    margin: 0% 10%;
+    text-align:left;
+}
+
 .teamImg{
     width:150px;
     height:150px;
@@ -168,10 +208,10 @@ nav{
 
 .status{
     font-size:80px;
-    position: absolute;
-    right: 0;
+    margin-left:auto;
     margin-right:30px;
 }
+
 
 
 /*Password Generator*/
@@ -188,15 +228,23 @@ nav{
 
 
 /*to-do list*/
+#inputArea{
+    display:flex;
+    justify-content: center;
+}
+
 #toDoInput{
     width: 80%;
+    height:90px;
     float: center;
     font-size: 25px;
     border: none;
     word-break: break-word;
+    resize:none;
 }
 #inputButton{
     width: 4%;
+    height:30px;
     background:  #4e342e;
     color: #fff2e2;
     text-align: center;
@@ -205,6 +253,7 @@ nav{
     border: none;
     float: center;
     margin-left: 6px;
+    align-self:flex-end;
 }
 #inputButton:hover{
     background-color: #794543;
@@ -228,11 +277,28 @@ nav{
     color: #ffe4c4;
 }
 #invalid-input-warning{
-    color: #702963;
+    color: #ff0000;
     font-weight: bold;
 }
 #toDoCount{
-    text-align: right;
+    text-align: left;
+    font-weight:bold;
     font-size: 20px;
-    margin-right: 50px;
+    margin-left: 7.5%;
 }
+
+.delete-button{
+    align-self: flex-end;
+    color:#ffe4c4;
+    font-size: 20px;
+    margin: 15px;
+    border: solid 3px #412d28;
+    background-color: #4e342e;
+    border-radius:3px; 
+}
+.delete-button:hover{
+    background-color: #794543;
+}
+
+
+
