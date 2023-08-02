@@ -331,3 +331,17 @@ nav{
 #done-ul li{
     text-decoration: line-through;
 }
+
+
+
+/*Password Generator Checkboxes*/
+.checkboxpassword{
+    border: solid 1px #412d28;
+    background-color: #4e342e;
+    color: bisque;
+    width: auto;
+    float: center;
+    text-align:center;
+    font-size:22px;
+    border-radius: 4px;
+}
