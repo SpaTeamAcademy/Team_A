@@ -6,7 +6,7 @@ function Counter(operator){
     }else if(operator ==="minus"){
         count--;
     }
-    document.getElementById("toDoCount").innerText=count;
+    document.getElementById("toDoCount").innerText="Tasks to do: " + count;
 }
 
 
