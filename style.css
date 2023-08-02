@@ -258,21 +258,22 @@ nav{
 #inputButton:hover{
     background-color: #794543;
 }
-#toDo-ul{
+#toDo-ul,#done-ul{
     padding-left: 15px;
     padding-right: 15px;
     margin-top: 15px;
     list-style: none;
     text-align: left;
 }
-#toDo-ul li{
+#toDo-ul li,#done-ul li{
     font-size: 25px;
     cursor: pointer;
     position: relative;
     transition: 0.2s;
     padding: 10px 10px 10px 10px;
 }
-#toDo-ul li:hover{
+
+#toDo-ul li:hover,#done-ul li:hover{
     background-color: rgb(123, 147, 99);
     color: #ffe4c4;
 }
@@ -287,8 +288,7 @@ nav{
     margin-left: 7.5%;
 }
 
-.delete-button{
-    align-self: flex-end;
+.delete-button,.check-button{
     color:#ffe4c4;
     font-size: 20px;
     margin: 15px;
@@ -296,9 +296,9 @@ nav{
     background-color: #4e342e;
     border-radius:3px; 
 }
-.delete-button:hover{
+.delete-button:hover,.check-button:hover{
     background-color: #794543;
 }
-
-
-
+#done-ul li{
+    text-decoration: line-through;
+}
