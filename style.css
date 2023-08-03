@@ -333,17 +333,16 @@ nav{
 }
 
 
-
 /*Password Generator Checkboxes*/
 .checkboxpassword{
     border: solid 2px #412d28;
     background-color: #4e342e;
     color: bisque;
-    width: 35px;
-    height: 35px;
+    display: flexbox; 
+    width: 120px; 
     float: center;
-    text-align:center;
     font-size:22px;
     border-radius: 3px;
     padding:10;
 }
+
