@@ -156,6 +156,7 @@ nav{
     border: solid 3px #412d28;
     background-color: #4e342e;
     border-radius:3px;
+    cursor: pointer;
 }
 .btn{
     height: 130px;
@@ -164,6 +165,7 @@ nav{
     border: solid 3px #412d28;
     background-color: #4e342e;
     padding:auto;
+    cursor: pointer;
 }
 .btn:hover, #resetBtn:hover, #generate-button:hover, .btn:focus{
     background-color: #794543;
@@ -186,6 +188,7 @@ nav{
     color:#4e342e;
     display:flex;
     align-items:center;
+    cursor: pointer;
 }
 
 .accBtn:hover{
@@ -231,7 +234,7 @@ nav{
 }
 #labelLength{
     font-size: 25px;
-    margin-left: 2%;
+    padding-right: 25px;
 }
 #PasswordDisplay{
     width: 700px;
@@ -246,6 +249,9 @@ nav{
     overflow: auto;
     padding: 0 5px 0 5px;
     padding-top: 18px;
+    display: inline-block;
+    font-size: 38px;
+   white-space: nowrap;
 }
 
 /*to-do list*/
@@ -340,9 +346,17 @@ nav{
     color: bisque;
     display: flexbox; 
     width: 120px; 
-    float: center;
     font-size:22px;
     border-radius: 3px;
-    padding:10;
+    margin-left: 15px;
+    margin-right: 15px;
+    height: 28px;
+    width: 100px;
+    padding: 0 5px 0  5px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 25px;
 }
-
+.checkboxpassword input{
+    cursor: pointer;
+}
